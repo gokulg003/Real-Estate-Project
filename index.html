@@ -135,30 +135,39 @@
             </iframe>
         </div>
 
-       <!-- VIDEO SLIDER -->
-<div class="rounded-3xl shadow-lg overflow-hidden">
-    
-    <div class="swiper videoSwiper h-[320px]">
-        <div class="swiper-wrapper">
+       <!-- VIDEO SLIDER (FULL SIZE LIKE IMAGE) -->
+<div class="swiper videoSwiper shadow-2xl">
 
-            <!-- VIDEO 1 -->
-            <div class="swiper-slide flex justify-center items-center bg-black">
-                <video class="h-full object-cover rounded-2xl"
-                       controls muted loop>
-                    <source src="videos/vid1.mp4" type="video/mp4">
-                </video>
-            </div>
+    <div class="swiper-wrapper">
 
-            <!-- VIDEO 2 -->
-            <div class="swiper-slide flex justify-center items-center bg-black">
-                <video class="h-full object-cover rounded-2xl"
-                       controls muted loop>
-                    <source src="videos/vid2.mp4" type="video/mp4">
-                </video>
-            </div>
+        <!-- VIDEO 1 -->
+        <div class="swiper-slide relative">
+            <video class="w-full h-[450px] object-cover"
+                   autoplay muted loop playsinline controls>
+                <source src="videos/video2.mp4" type="video/mp4">
+            </video>
 
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent"></div>
         </div>
 
+        <!-- VIDEO 2 -->
+        <div class="swiper-slide relative">
+            <video class="w-full h-[450px] object-cover"
+                   autoplay muted loop playsinline controls>
+                <source src="videos/video1.mp4" type="video/mp4">
+            </video>
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent"></div>
+        </div>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="swiper-button-next video-next text-white"></div>
+    <div class="swiper-button-prev video-prev text-white"></div>
+    <div class="swiper-pagination video-pagination"></div>
+
+</div>
         <!-- Controls -->
         <div class="swiper-button-next text-white"></div>
         <div class="swiper-button-prev text-white"></div>
