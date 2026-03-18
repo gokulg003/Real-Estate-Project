@@ -77,14 +77,62 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-16 max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8">
-        <div class="bg-blue-900 text-white p-10 rounded-3xl">
-            <h2 class="text-3xl font-bold mb-6">Contact</h2>
-            <p>Trichy Office</p>
-            <p class="mt-2">123 Countinment Road, Trichy</p>
+   <!-- CONTACT + MAP + VIDEOS -->
+<section id="contact" class="py-16 max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-stretch">
+
+    <!-- LEFT SIDE -->
+    <div class="bg-blue-900 text-white p-10 rounded-3xl shadow-xl flex flex-col justify-center">
+        <h2 class="text-3xl font-bold mb-8">Contact Our Office</h2>
+
+        <p class="font-bold text-lg">Regional Office (Trichy)</p>
+        <p class="text-blue-100 mt-2">
+            Near Anna University BIT Campus,<br>
+            Tiruchirappalli, Tamil Nadu
+        </p>
+
+        <div class="mt-6">
+            <p class="text-sm text-blue-200">Phone: +91 98765 43210</p>
+            <p class="text-sm text-blue-200">Email: admin@tnrea.org</p>
         </div>
-    </section>
+
+        <a href="https://wa.me/91XXXXXXXXXX"
+           class="mt-10 bg-green-500 hover:bg-green-600 text-white py-4 px-8 rounded-2xl font-black text-center transition shadow-lg">
+            <i class="fa-brands fa-whatsapp text-2xl mr-2"></i> JOIN OUR WHATSAPP GROUP
+        </a>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="flex flex-col gap-6">
+
+        <!-- MAP -->
+        <div class="rounded-3xl overflow-hidden shadow-lg border-4 border-white h-[300px]">
+            <iframe 
+                src="https://www.google.com/maps?q=Tiruchirappalli,Tamil Nadu&output=embed"
+                class="w-full h-full border-0"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- VIDEOS -->
+        <div class="grid grid-cols-2 gap-4">
+
+            <!-- VIDEO 1 -->
+            <video class="rounded-2xl shadow-lg w-full h-[300px] object-cover"
+                   controls autoplay muted loop>
+                <source src="videos/video1.mp4" type="video/mp4">
+            </video>
+
+            <!-- VIDEO 2 -->
+            <video class="rounded-2xl shadow-lg w-full h-[300px] object-cover"
+                   controls autoplay muted loop>
+                <source src="videos/video2.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+    </div>
+</section>
 
     <!-- LEADERSHIP -->
     <section class="py-20 bg-white">
