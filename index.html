@@ -114,22 +114,37 @@
             </iframe>
         </div>
 
-        <!-- VIDEOS -->
-        <div class="grid grid-cols-2 gap-4">
+       <!-- VIDEO SLIDER -->
+<div class="rounded-3xl shadow-lg overflow-hidden">
+    
+    <div class="swiper videoSwiper h-[320px]">
+        <div class="swiper-wrapper">
 
             <!-- VIDEO 1 -->
-            <video class="rounded-2xl shadow-lg w-full h-[300px] object-cover"
-                   controls autoplay muted loop>
-                <source src="videos/video1.mp4" type="video/mp4">
-            </video>
+            <div class="swiper-slide flex justify-center items-center bg-black">
+                <video class="h-full object-cover rounded-2xl"
+                       controls muted loop>
+                    <source src="videos/video1.mp4" type="video/mp4">
+                </video>
+            </div>
 
             <!-- VIDEO 2 -->
-            <video class="rounded-2xl shadow-lg w-full h-[300px] object-cover"
-                   controls autoplay muted loop>
-                <source src="videos/video2.mp4" type="video/mp4">
-            </video>
+            <div class="swiper-slide flex justify-center items-center bg-black">
+                <video class="h-full object-cover rounded-2xl"
+                       controls muted loop>
+                    <source src="videos/video2.mp4" type="video/mp4">
+                </video>
+            </div>
 
         </div>
+
+        <!-- Controls -->
+        <div class="swiper-button-next text-white"></div>
+        <div class="swiper-button-prev text-white"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+</div>
 
     </div>
 </section>
@@ -170,12 +185,32 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            autoplay: { delay: 3000 },
-        });
-    </script>
+
+<script>
+    // IMAGE SLIDER
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        effect: "fade",
+        autoplay: { delay: 4000, disableOnInteraction: false },
+        pagination: { el: ".img-pagination", clickable: true },
+        navigation: { nextEl: ".img-next", prevEl: ".img-prev" },
+    });
+
+    // VIDEO SLIDER
+    var videoSwiper = new Swiper(".videoSwiper", {
+        loop: true,
+        spaceBetween: 20,
+        centeredSlides: true,
+        pagination: {
+            el: ".videoSwiper .swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".videoSwiper .swiper-button-next",
+            prevEl: ".videoSwiper .swiper-button-prev",
+        },
+    });
+</script>
 
 </body>
 </html>
